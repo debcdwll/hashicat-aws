@@ -45,56 +45,7 @@ module "vpc" {
   # VPC endpoint for DynamoDB
   enable_dynamodb_endpoint = true
 
-  # VPC endpoint for SSM
-  enable_ssm_endpoint              = true
-  ssm_endpoint_private_dns_enabled = true
-  ssm_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC endpoint for SSMMESSAGES
-  enable_ssmmessages_endpoint              = true
-  ssmmessages_endpoint_private_dns_enabled = true
-  ssmmessages_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC Endpoint for EC2
-  enable_ec2_endpoint              = true
-  ec2_endpoint_private_dns_enabled = true
-  ec2_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC Endpoint for EC2MESSAGES
-  enable_ec2messages_endpoint              = true
-  ec2messages_endpoint_private_dns_enabled = true
-  ec2messages_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC Endpoint for ECR API
-  enable_ecr_api_endpoint              = true
-  ecr_api_endpoint_private_dns_enabled = true
-  ecr_api_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC Endpoint for ECR DKR
-  enable_ecr_dkr_endpoint              = true
-  ecr_dkr_endpoint_private_dns_enabled = true
-  ecr_dkr_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC endpoint for KMS
-  enable_kms_endpoint              = true
-  kms_endpoint_private_dns_enabled = true
-  kms_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC endpoint for ECS
-  enable_ecs_endpoint              = true
-  ecs_endpoint_private_dns_enabled = true
-  ecs_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC endpoint for ECS telemetry
-  enable_ecs_telemetry_endpoint              = true
-  ecs_telemetry_endpoint_private_dns_enabled = true
-  ecs_telemetry_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
-  # VPC endpoint for SQS
-  enable_sqs_endpoint              = true
-  sqs_endpoint_private_dns_enabled = true
-  sqs_endpoint_security_group_ids  = [data.aws_security_group.default.id]
-
+  
   # VPC Flow Logs (Cloudwatch log group and IAM role will be created)
   enable_flow_log                      = true
   create_flow_log_cloudwatch_log_group = true

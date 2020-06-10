@@ -110,3 +110,4 @@ module "vpc" {
     Project  = "Secret"
     Endpoint = "true"
   }
+}
